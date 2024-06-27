@@ -22,7 +22,7 @@ class BookListView(generics.ListCreateAPIView):
     serializer_class = BookSerializer
     filterset_class = BookFilter
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
-    search_fields = ['title', 'author']
+    search_fields = ['title', 'author_name']
     ordering_fields = ['title', 'publication_year']
 
     def get_queryset(self):
